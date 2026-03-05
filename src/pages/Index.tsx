@@ -8,7 +8,7 @@ import FinalCTASection from "@/components/FinalCTASection";
 
 const Index = () => {
   return (
-    <main className="overflow-x-hidden">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <HeroSection />
       <TransitionSection />
       <ModulesSection />
@@ -17,9 +17,8 @@ const Index = () => {
       <GuaranteeSection />
       <FinalCTASection />
 
-      {/* Footer */}
-      <footer className="py-8 bg-accent text-center">
-        <p className="text-accent-foreground/60 font-body text-sm">
+      <footer className="py-8 bg-card border-t border-border text-center">
+        <p className="text-muted-foreground text-sm">
           © {new Date().getFullYear()} Guia Técnico da Moringa. Todos os direitos reservados.
         </p>
       </footer>

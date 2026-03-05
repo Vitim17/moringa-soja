@@ -3,21 +3,20 @@ import { ArrowRight } from "lucide-react";
 
 const TransitionSection = () => {
   return (
-    <section className="py-20 sm:py-24 bg-section-green relative overflow-hidden">
-      {/* Decorative circles */}
-      <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-primary-foreground/5" />
-      <div className="absolute -bottom-16 -left-16 w-40 h-40 rounded-full bg-primary-foreground/5" />
+    <section className="section-padding section-container relative overflow-hidden">
+      {/* Glow sutil */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] h-[200px] bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-primary-foreground mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight text-foreground mb-6"
         >
           Gostou da aula? Então veja o{" "}
-          <span className="text-gradient-gold">método completo.</span>
+          <span className="text-gradient">método completo.</span>
         </motion.h2>
 
         <motion.p
@@ -25,7 +24,7 @@ const TransitionSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-primary-foreground/80 text-lg font-body leading-relaxed mb-10 max-w-2xl mx-auto"
+          className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto"
         >
           Essa foi apenas a primeira etapa. No curso completo você aprende do
           plantio até o lucro com a moringa, evitando erros e acelerando
@@ -40,7 +39,7 @@ const TransitionSection = () => {
         >
           <a
             href="#oferta"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground font-heading font-bold text-lg rounded-full shadow-gold hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-lg btn-glow animate-pulse-glow hover:opacity-90 transition-opacity"
           >
             Quero Acessar o Curso Completo
             <ArrowRight className="w-5 h-5" />

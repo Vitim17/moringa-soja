@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Zap, ShieldCheck } from "lucide-react";
+import { Check, Zap, ArrowRight } from "lucide-react";
 
 const includes = [
   "Acesso vitalício ao curso completo",
@@ -12,74 +12,78 @@ const includes = [
 
 const OfferSection = () => {
   return (
-    <section id="oferta" className="py-20 sm:py-28 bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <section id="oferta" className="section-padding section-container relative overflow-hidden scroll-mt-4">
+      {/* Background gradient no estilo mentoria */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+
+      <div className="max-w-3xl mx-auto relative z-10 w-full">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="bg-card rounded-3xl border border-border shadow-2xl overflow-hidden"
+          className="text-center mb-10"
         >
-          {/* Header */}
-          <div className="bg-section-green px-6 sm:px-10 py-8 text-center">
-            <Zap className="w-8 h-8 text-secondary mx-auto mb-3" />
-            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-primary-foreground">
-              Acesso Completo ao Guia Técnico da Moringa
-            </h2>
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Zap className="w-6 h-6 text-primary" />
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">Oferta especial</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-4">
+            Acesso completo ao{" "}
+            <span className="text-gradient">Guia Técnico da Moringa</span>
+          </h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="bg-card border border-border/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mb-8 text-left"
+        >
+          <div className="grid sm:grid-cols-2 gap-3 mb-8">
+            {includes.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -15 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.08 }}
+                className="flex items-center gap-3"
+              >
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 shrink-0">
+                  <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                </div>
+                <span className="text-sm sm:text-base text-card-foreground">{item}</span>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Body */}
-          <div className="px-6 sm:px-10 py-10">
-            <div className="grid sm:grid-cols-2 gap-3 mb-10">
-              {includes.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.08 }}
-                  className="flex items-center gap-3"
-                >
-                  <Check className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-card-foreground font-body">{item}</span>
-                </motion.div>
-              ))}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-center mb-8"
+          >
+            <p className="text-muted-foreground text-sm line-through mb-1">De R$ 197,00</p>
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-primary font-black text-5xl sm:text-6xl">R$ 37</span>
+              <span className="text-primary font-bold text-2xl">,00</span>
             </div>
+            <p className="text-muted-foreground text-sm mt-2">Pagamento único • Acesso vitalício</p>
+          </motion.div>
 
-            {/* Price */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center mb-8"
+          <div className="text-center">
+            <a
+              href="https://curso-agromoringa.vercel.app/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 sm:px-10 sm:py-5 btn-glow animate-pulse-glow bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-lg hover:opacity-90 transition-opacity group"
             >
-              <p className="text-muted-foreground font-body text-sm line-through mb-1">
-                De R$ 197,00
-              </p>
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-primary font-heading font-black text-5xl sm:text-6xl">
-                  R$ 37
-                </span>
-                <span className="text-primary font-heading font-bold text-2xl">,00</span>
-              </div>
-              <p className="text-muted-foreground font-body text-sm mt-2">
-                Pagamento único • Acesso vitalício
-              </p>
-            </motion.div>
-
-            {/* CTA */}
-            <div className="text-center">
-              <a
-                href="https://curso-agromoringa.vercel.app/login"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-heading font-bold text-lg rounded-full shadow-gold animate-pulse-glow hover:scale-105 transition-transform duration-300"
-              >
-                🔥 Garantir Meu Acesso Agora
-              </a>
-            </div>
+              Garantir Meu Acesso Agora
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
+            </a>
           </div>
         </motion.div>
       </div>

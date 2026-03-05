@@ -13,10 +13,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
-        body: ['Source Sans 3', 'sans-serif'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,14 +47,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        earth: {
-          DEFAULT: "hsl(var(--earth))",
-          light: "hsl(var(--earth-light))",
-        },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -89,8 +77,8 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsla(45, 90%, 50%, 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsla(45, 90%, 50%, 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(152 100% 50% / 0.4)" },
+          "50%": { boxShadow: "0 0 40px hsl(152 100% 50% / 0.6)" },
         },
         "count-up": {
           from: { opacity: "0", transform: "translateY(20px)" },
