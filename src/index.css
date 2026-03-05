@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 90 20% 97%;
+    --foreground: 150 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 142 60% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 80% 55%;
+    --secondary-foreground: 150 30% 10%;
+
+    --muted: 90 15% 92%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 142 40% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 90 15% 85%;
+    --input: 90 15% 85%;
+    --ring: 142 60% 32%;
+
+    --radius: 0.75rem;
+
+    --earth: 30 30% 30%;
+    --earth-light: 35 25% 60%;
+    --gold: 45 90% 50%;
+    --gold-light: 45 80% 70%;
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Source Sans 3', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  }
+  .bg-hero-overlay {
+    background: linear-gradient(180deg, hsla(150, 30%, 8%, 0.7) 0%, hsla(150, 30%, 8%, 0.85) 100%);
+  }
+  .bg-section-green {
+    background: linear-gradient(180deg, hsl(142, 60%, 32%) 0%, hsl(142, 50%, 22%) 100%);
+  }
+  .shadow-gold {
+    box-shadow: 0 0 30px hsla(45, 90%, 50%, 0.3);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
