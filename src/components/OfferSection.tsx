@@ -76,7 +76,7 @@ const OfferSection = () => {
 
           <div className="text-center">
             <a
-              href="https://curso-agromoringa.vercel.app/login"
+              href="https://pay.cakto.com.br/fva3wjt_492715"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 sm:px-10 sm:py-5 btn-glow animate-pulse-glow bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-lg hover:opacity-90 transition-opacity group"
