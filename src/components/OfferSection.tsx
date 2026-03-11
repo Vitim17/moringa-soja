@@ -66,7 +66,7 @@ const OfferSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-center mb-8"
           >
-            <p className="text-muted-foreground text-sm line-through mb-1">De R$ 197,00</p>
+            <p className="text-muted-foreground text-sm line-through mb-1">De R$ 497,00</p>
             <div className="flex items-center justify-center gap-2">
               <span className="text-primary font-black text-5xl sm:text-6xl">R$ 237</span>
               <span className="text-primary font-bold text-2xl">,00</span>

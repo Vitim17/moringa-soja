@@ -15,15 +15,15 @@ import {
 } from "lucide-react";
 
 const modules = [
-  { icon: BookOpen, title: "Boas-vindas ao Guia Técnico da Moringa", num: 1, free: true },
-  { icon: Leaf, title: "Moringa: A Planta Mais Poderosa do Agro Moderno", num: 2 },
-  { icon: Sprout, title: "Plantio e Manejo da Moringa (Do Zero ao Primeiro Corte)", num: 3 },
-  { icon: Beef, title: "Moringa na Alimentação Animal", num: 4 },
-  { icon: TrendingUp, title: "Moringa como Negócio", num: 5 },
-  { icon: BarChart3, title: "Ajustes Técnicos que Definem o Resultado", num: 6 },
-  { icon: CircleDot, title: "Semente: O Início do Sucesso na Moringa", num: 7 },
-  { icon: AlertTriangle, title: "Problemas Comuns e Como Resolver", num: 8 },
-  { icon: MapPin, title: "Moringa na Prática e no Campo", num: 9 },
+  { icon: BookOpen, title: "Bem-vindo à Nova Oportunidade da Moringa", num: 1, free: true },
+  { icon: Leaf, title: "Por Que a Moringa Está Gerando Renda no Campo", num: 2 },
+  { icon: Sprout, title: "Como Começar do Zero Mesmo Sem Experiência", num: 3 },
+  { icon: Beef, title: "Como Reduzir o Custo da Ração em Até 50%", num: 4 },
+  { icon: TrendingUp, title: "Como Transformar a Moringa em Uma Nova Fonte de Renda", num: 5 },
+  { icon: BarChart3, title: "Os Ajustes que Fazem a Produção Dar Lucro", num: 6 },
+  { icon: CircleDot, title: "O Segredo das Sementes e da Produção Produtiva", num: 7 },
+  { icon: AlertTriangle, title: "Os Erros que Fazem Produtores Perder Dinheiro", num: 8 },
+  { icon: MapPin, title: "Como Aplicar Tudo na Prática e Começar a Ter Resultado", num: 9 },
   { icon: Mountain, title: "Caminho da Escala", num: 10 },
 ];
 
